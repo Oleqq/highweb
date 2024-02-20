@@ -1,0 +1,219 @@
+// callback секия / обратного звонка
+.callback {
+    &__container {
+        margin-bottom: 0;
+    }
+    &__wrapper {
+        display: flex;
+        gap: 25%;
+
+        @media (max-width:1199px) {
+            gap: 24px;
+        }
+        @media (max-width:991px) {
+        
+            flex-direction: column;
+        }
+        @media (max-width:567px) {
+            flex-direction: column-reverse;
+            gap:124px;
+        }
+    }
+
+}
+
+
+
+// форма обратного звонка
+
+.form-control:focus {
+    color: #191919;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-color:#a317dfcc;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #a317df5c;
+}
+
+
+.callback-form {
+    z-index: 6;
+    width: 100%;
+
+    .mb-3 {
+        position: relative;
+    }
+
+    &__wrapper {
+        width: 33%;
+        max-width: 450px;
+        // @media (max-width:1440px) {
+        //     width: 50%;
+        // }
+        @media (max-width:991px) {
+            width: 50%;
+            max-width: 350px;
+        }
+        @media (max-width:676px) {
+            width: 66%;
+        }
+
+        @media (max-width:567px) {
+            width: 100%;
+            max-width: unset;
+        }
+        
+    }
+
+
+    
+
+    .form-services {
+        display: flex;
+        justify-content: space-between;
+
+        .service-option {
+           
+
+            input[type="checkbox"] {
+                display: none; /* Скрыть оригинальные чекбоксы */
+            }
+
+
+           
+
+            input[type="checkbox"]:checked + .service-name {
+                transition: .2s ease;
+                background-color: #a217df; /* Изменение цвета при нажатии */
+                color: #fff;
+            }
+
+            
+
+            .service-name {
+                font-family: var(--second-family);
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 130%;
+                color: #000;
+
+                transition: .2s ease;
+
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: rgba(217, 217, 217, 0.4);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .2s ease;
+
+                @media (max-width:1440px) {
+                    width: 85px;
+                    height: 85px;
+                    font-size: 18px;
+                }
+                @media (max-width:1199px) {
+                    width: 75px;
+                    height: 75px;
+                }
+                @media (max-width:567px) {
+                    font-size: 14px;
+                }
+                @media (max-width:350px) {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+    input,
+    textarea {
+        background: rgba(217, 217, 217, 0.4);
+        border: none;
+        padding: 16px 24px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #000;
+
+        @media (max-width:567px) {
+            font-size: 16px;
+        }
+    
+       
+
+        &::placeholder {
+            color: #191919;
+        }
+    }
+}
+
+/* Стилизация бейджа ошибки */
+.error-message {
+    display: none; /* Скрываем сообщения об ошибках по умолчанию */
+    color: #fff; /* Цвет текста сообщения об ошибке */
+    font-size: 12px; /* Размер шрифта сообщения об ошибке */
+    margin-top: 4px; /* Отступ сверху для сообщения об ошибке */
+    background-color: #a217df;
+    padding: 16px 24px;
+    border-radius: 8px;
+
+    width: fit-content;
+    
+    position: absolute;
+    right: -35px;
+    top: -20px;
+
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
+}
+
+// /* Стилизация поля с ошибкой */
+// .callback-form input:invalid + .error-message,
+// .callback-form textarea:invalid + .error-message {
+//     display: block; /* Показать бейдж */
+//     margin-top: 4px; /* Отступ сверху */
+// }
+
+// /* Скрыть стандартные сообщения об ошибке */
+// .callback-form input:invalid,
+// .callback-form textarea:invalid {
+//     border-color: red; /* Цвет границы для недопустимых полей */
+//     box-shadow: none; /* Убираем стандартную тень */
+// }
+
+
+
+
+// .services {
+//     display: flex;
+// }
+
+// .service-option {
+//     margin-right: 20px;
+// }
+
+// .service-option input[type="checkbox"] {
+//     display: none;
+// }
+
+// .service-option input[type="checkbox"] + .service-name:before {
+//     content: '';
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     border: 2px solid #000;
+//     border-radius: 50%;
+//     margin-right: 5px;
+// }
+
+// .service-option input[type="checkbox"]:checked + .service-name:before {
+//     background-color: #000;
+// }

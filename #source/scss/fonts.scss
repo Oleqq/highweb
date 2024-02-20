@@ -1,0 +1,244 @@
+:root {
+    --font-family: "TT Firs Neue", sans-serif;
+    --second-family: "PT Root UI", sans-serif;
+    --third-family: "SF Pro Display", sans-serif;
+    --font3: "Inter", sans-serif;
+    --font4: "Montserrat", sans-serif;
+}
+/* tt firs neue */
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTFirsNeue-Light.eot');
+    src: local('TT Firs Neue Light'), local('TTFirsNeue-Light'),
+        url('../fonts/TTFirsNeue-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFirsNeue-Light.woff2') format('woff2'),
+        url('../fonts/TTFirsNeue-Light.woff') format('woff'),
+        url('../fonts/TTFirsNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTFirsNeue-Regular.eot');
+    src: local('TT Firs Neue Regular'), local('TTFirsNeue-Regular'),
+        url('../fonts/TTFirsNeue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+        url('../fonts/TTFirsNeue-Regular.woff') format('woff'),
+        url('../fonts/TTFirsNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTFirsNeue-DemiBold.eot');
+    src: local('TT Firs Neue DemiBold'), local('TTFirsNeue-DemiBold'),
+        url('../fonts/TTFirsNeue-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFirsNeue-DemiBold.woff2') format('woff2'),
+        url('../fonts/TTFirsNeue-DemiBold.woff') format('woff'),
+        url('../fonts/TTFirsNeue-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTFirsNeue-Medium.eot');
+    src: local('TT Firs Neue Medium'), local('TTFirsNeue-Medium'),
+        url('../fonts/TTFirsNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFirsNeue-Medium.woff2') format('woff2'),
+        url('../fonts/TTFirsNeue-Medium.woff') format('woff'),
+        url('../fonts/TTFirsNeue-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTFirsNeue-Thin.eot');
+    src: local('TT Firs Neue Thin'), local('TTFirsNeue-Thin'),
+        url('../fonts/TTFirsNeue-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTFirsNeue-Thin.woff2') format('woff2'),
+        url('../fonts/TTFirsNeue-Thin.woff') format('woff'),
+        url('../fonts/TTFirsNeue-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+// pt root ui
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('../fonts/PTRootUI-Medium.eot');
+    src: local('PT Root UI Medium'), local('PTRootUI-Medium'),
+        url('../fonts/PTRootUI-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTRootUI-Medium.woff2') format('woff2'),
+        url('../fonts/PTRootUI-Medium.woff') format('woff'),
+        url('../fonts/PTRootUI-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('../fonts/PTRootUI-Regular.eot');
+    src: local('PT Root UI'), local('PTRootUI-Regular'),
+        url('../fonts/PTRootUI-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTRootUI-Regular.woff2') format('woff2'),
+        url('../fonts/PTRootUI-Regular.woff') format('woff'),
+        url('../fonts/PTRootUI-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('../fonts/PTRootUI-Bold.eot');
+    src: local('PT Root UI Bold'), local('PTRootUI-Bold'),
+        url('../fonts/PTRootUI-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PTRootUI-Bold.woff2') format('woff2'),
+        url('../fonts/PTRootUI-Bold.woff') format('woff'),
+        url('../fonts/PTRootUI-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+h1 {
+    color: #A217DF;
+    font-family: 'TT Firs Neue';
+
+    font-weight: 500;
+
+    font-size: 48px;
+
+    @media (max-width:1440px) {
+        font-size: 44px;
+    }
+    @media (max-width:1199px) {
+        font-size: 40px;
+    }
+    @media (max-width:991px) {
+        font-size: 36px;
+    }
+    @media (max-width:767px) {
+        font-size: 32px;
+    }
+    @media (max-width:567px) {
+        font-size: 24px;
+    }
+    @media (max-width:420px) {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: #a217df;
+
+    @media (max-width:1440px) {
+        font-size: 34px;
+    }
+    @media (max-width:1199px) {
+        font-size: 30px;
+    }
+    @media (max-width:991px) {
+        font-size: 26px;
+    }
+    @media (max-width:767px) {
+        font-size: 24px;
+    }
+    @media (max-width:567px) {
+        font-size: 22px;
+    }
+    @media (max-width:420px) {
+        font-size: 20px;
+    }
+}
+
+h3 {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 28px;
+
+    @media (max-width:1440px) {
+        font-size: 24px;
+    }
+    @media (max-width:1199px) {
+        font-size: 22px;
+    }
+    @media (max-width:991px) {
+        font-size: 20px;
+    }
+    @media (max-width:767px) {
+       font-size: 18px;
+    }
+    @media (max-width:567px) {
+        
+    }
+    @media (max-width:420px) {
+        
+    }
+    
+}
+
+h4 {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 22px;
+
+    @media (max-width:1440px) {
+        font-size: 20px;
+    }
+    @media (max-width:1199px) {
+        font-size: 19px;
+    }
+    @media (max-width:991px) {
+        font-size: 18px;
+    }
+    @media (max-width:767px) {
+       font-size: 17px;
+    }
+    @media (max-width:567px) {
+        font-size: 16px;
+    }
+    @media (max-width:420px) {
+        
+    }
+    
+}
+
+p {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 143%;
+    color: #191919;
+
+    @media (max-width:1440px) {
+        font-size: 19px;
+    }
+    @media (max-width:1199px) {
+        font-size: 18px;
+    }
+    @media (max-width:991px) {
+        font-size: 17px;
+    }
+    @media (max-width:767px) {
+       font-size: 16px;
+    }
+    @media (max-width:567px) {
+        font-size: 15px;
+    }
+    @media (max-width:420px) {
+        font-size: 14px;
+    }
+}

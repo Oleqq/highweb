@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    
+    <!-- header -->
+    <header class="header header-primary" id="header">
+        
+        <div class="container header__container">
+
+            <div class="header__wrapper">
+
+                <a href="/" class="header__logo">
+                    <img src="./img/header/header-logo.jpg" alt="">
+                </a>
+    
+                <nav class="header__nav">
+                    <ul>
+                        <li>
+                            <a href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li>
+                            <a href="./service-cost.html">Стоимость услуг</a>
+                        </li>
+                        <li>
+                            <a href="">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="./about-us.html">О Компании</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <div class="header__socials">
+                    <a href="">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_162_1286)">
+                            <path d="M18.3764 1.77336L0.657317 8.64158C-0.0557229 8.96141 -0.296898 9.60195 0.484944 9.94956L5.03069 11.4016L16.0216 4.5739C16.6217 4.14525 17.2361 4.25956 16.7074 4.73106L7.2677 13.3223L6.97117 16.9581C7.24583 17.5195 7.74873 17.522 8.0695 17.243L10.6811 14.7591L15.154 18.1258C16.1928 18.744 16.7581 18.345 16.9816 17.2119L19.9154 3.24828C20.22 1.85351 19.7006 1.23898 18.3764 1.77336Z" fill="black"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_162_1286">
+                            <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="header__burger" id="header__burger">
+                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H24" stroke="#191919" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M2 12H24" stroke="#191919" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M2 22H24" stroke="#191919" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Меню-оверлей -->
+    <div class="overlay-menu">
+        <div class="menu-content">
+            
+            <ul>
+                <li>
+                    <a href="./portfolio.html">портфолио</a>
+                </li>
+                <li>
+                    <a href="./service-cost.html">стоимость услуг</a>
+                </li>
+                <li>
+                    <a href="#services__free">faq</a>
+                </li>
+                <li>
+                    <a href="./about-us.html">о компании</a>
+                </li>
+                
+                <!-- ... Добавьте свои пункты меню здесь ... -->
+            </ul>
+
+            <div class="menu-content__socials">
+
+                <a href="">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5387 0.204579L0.591585 7.54852C-0.0501506 7.89049 -0.267208 8.5754 0.436449 8.94709L4.52762 10.4997L14.4194 3.19909C14.9595 2.74075 15.5125 2.86298 15.0367 3.36714L6.54093 12.5534L6.27405 16.441C6.52125 17.0413 6.97385 17.0441 7.26255 16.7457L9.61303 14.0897L13.6386 17.6896C14.5736 18.3506 15.0823 17.924 15.2835 16.7125L17.9239 1.78166C18.198 0.290287 17.7305 -0.366807 16.5387 0.204579Z" fill="black" />
+                    </svg>
+                </a>
+
+                <a href="">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 4.19583C14.8842 4.79236 14.4006 5.27583 13.8042 5.27583C13.2078 5.27583 12.7242 4.79236 12.7242 4.19583C12.7242 3.5993 13.2078 3.11583 13.8042 3.11583C14.4007 3.11583 14.8842 3.5993 14.8842 4.19583ZM9 12C7.34316 12 6.00005 10.6568 6.00005 9C6.00005 7.34316 7.34316 6.00005 9 6.00005C10.6568 6.00005 12 7.34316 12 9C12 10.6568 10.6568 12 9 12ZM9 4.37836C6.44752 4.37836 4.37836 6.44752 4.37836 9C4.37836 11.5525 6.44752 13.6216 9 13.6216C11.5525 13.6216 13.6216 11.5525 13.6216 9C13.6216 6.44752 11.5525 4.37836 9 4.37836ZM9 1.62169C11.4031 1.62169 11.6878 1.63083 12.6367 1.67414C13.5142 1.71422 13.9908 1.86075 14.3079 1.98408C14.7279 2.14734 15.0277 2.34239 15.3427 2.65739C15.6577 2.97225 15.8528 3.27206 16.0161 3.69225C16.1392 4.00936 16.2859 4.48594 16.326 5.36344C16.3693 6.31252 16.3785 6.59714 16.3785 9.00028C16.3785 11.4034 16.3693 11.688 16.326 12.637C16.2859 13.5145 16.1394 13.9911 16.0161 14.3082C15.8528 14.7282 15.6577 15.028 15.3427 15.343C15.0279 15.658 14.7281 15.8531 14.3079 16.0163C13.9908 16.1395 13.5142 16.2862 12.6367 16.3263C11.6878 16.3696 11.4031 16.3787 9 16.3787C6.59672 16.3787 6.31209 16.3696 5.36316 16.3263C4.48566 16.2862 4.00908 16.1397 3.69197 16.0163C3.27192 15.8531 2.97211 15.658 2.65711 15.343C2.34225 15.0282 2.14706 14.7284 1.9838 14.3082C1.86061 13.9911 1.71394 13.5145 1.67386 12.637C1.63055 11.6879 1.62141 11.4033 1.62141 9.00028C1.62141 6.59714 1.63055 6.31252 1.67386 5.36344C1.71394 4.48594 1.86047 4.00936 1.9838 3.69225C2.14706 3.2722 2.34211 2.97239 2.65711 2.65739C2.97197 2.34239 3.27178 2.14734 3.69197 1.98408C4.00908 1.86089 4.48566 1.71422 5.36316 1.67414C6.31223 1.63083 6.59686 1.62169 9 1.62169ZM9 0C6.5558 0 6.24923 0.0104063 5.28933 0.0541406C4.33139 0.097875 3.67706 0.250031 3.10472 0.4725C2.51283 0.702422 2.01094 1.01025 1.51059 1.51059C1.01025 2.01094 0.702422 2.51283 0.4725 3.10472C0.250031 3.6772 0.097875 4.33139 0.0541406 5.28933C0.0104063 6.24923 0 6.5558 0 9C0 11.4442 0.0104063 11.7508 0.0541406 12.7107C0.097875 13.6686 0.250031 14.3228 0.4725 14.8953C0.702422 15.4872 1.01025 15.9891 1.51059 16.4894C2.01094 16.9897 2.51283 17.2974 3.10472 17.5275C3.6772 17.75 4.33139 17.9021 5.28933 17.9459C6.24923 17.9896 6.5558 18 9 18C11.4442 18 11.7508 17.9896 12.7107 17.9459C13.6686 17.9021 14.3228 17.75 14.8953 17.5275C15.4872 17.2974 15.9891 16.9897 16.4894 16.4894C16.9897 15.9891 17.2974 15.4872 17.5275 14.8953C17.75 14.3228 17.9021 13.6686 17.9459 12.7107C17.9896 11.7508 18 11.4442 18 9C18 6.5558 17.9896 6.24923 17.9459 5.28933C17.9021 4.33139 17.75 3.6772 17.5275 3.10472C17.2974 2.51283 16.9897 2.01094 16.4894 1.51059C15.9891 1.01025 15.4872 0.702563 14.8953 0.4725C14.3228 0.250031 13.6686 0.097875 12.7107 0.0541406C11.7508 0.0104063 11.4442 0 9 0Z" fill="url(#paint0_radial_162_1079)" />
+                        <defs>
+                          <radialGradient id="paint0_radial_162_1079" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2.6875 18.0625) scale(22.9995)">
+                            <stop />
+                          </radialGradient>
+                        </defs>
+                    </svg>
+                </a>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- main -->
+    <main>
+
+        <section class="hero hero-secondary">
+
+            <div class="container hero__container">
+
+                <div class="hero__wrapper">
+
+                    
+                    
+                    
+                    <a href="" class="hero__btn">о компании</a>
+                    
+                    <div class="hero__text hero__text-secondary">
+                        <p>
+                            В <span>High Web</span> разрабатывают сложные веб- и мобильные продукты 
+                        </p>
+                        <p>
+                            Мы верим в дизайн, основанный на <span>данных</span>, <span>аналитике</span> и <span>юзабилити</span><br>Техническая составляющая отвечает масштабу задачи в перспективе и<br>включает в себя <span>последние технологии</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="team">
+
+            <div class="container team-slider__container">
+
+                <div class="swiper-container team-slider">
+
+                    <div class="team-slider-button-prev">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <rect width="46" height="46" rx="23" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)" fill="#A217DF" />
+                            </g>
+                            <path d="M14.0629 24.3751C13.4771 23.7893 13.4771 22.8396 14.0629 22.2538L23.6088 12.7079C24.1946 12.1221 25.1443 12.1221 25.7301 12.7079C26.3159 13.2936 26.3159 14.2434 25.7301 14.8292L17.2449 23.3145L25.7301 31.7997C26.3159 32.3855 26.3159 33.3353 25.7301 33.9211C25.1443 34.5068 24.1946 34.5068 23.6088 33.9211L14.0629 24.3751ZM30.877 24.8145L15.1235 24.8145L15.1235 21.8145L30.877 21.8145L30.877 24.8145Z" fill="white" />
+                            
+                        </svg>
+                    </div>
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+
+                            <div class="team-member">
+                                
+                                <div class="member__title desktop">
+                                    <h3>
+                                        иванов иван
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+
+
+                                <div class="member__info">
+
+                                    <div class="member__desc">
+                                        <p>
+                                            Техническая составляющая отвечает масштабу задачи в перспективе и включает в себя последние технологии
+                                        </p>
+                                        <p>
+                                            Генерируем идеи и экспериментируем с новыми технологиями, чтобы создать действительно рабочее
+                                        </p>
+                                    </div>
+                                    <div class="member__photo">
+                                        <img src="./img/team/member-1.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                </div>
+
+                                <div class="member__title mobile">
+                                    <h3>
+                                        Иванов Иван
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+
+                        <div class="swiper-slide">
+
+                            <div class="team-member">
+                                
+                                <div class="member__title desktop">
+                                    <h3>
+                                        иванов иван
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+
+
+                                <div class="member__info">
+
+                                    <div class="member__desc">
+                                        <p>
+                                            Техническая составляющая отвечает масштабу задачи в перспективе и включает в себя последние технологии
+                                        </p>
+                                        <p>
+                                            Генерируем идеи и экспериментируем с новыми технологиями, чтобы создать действительно рабочее
+                                        </p>
+                                    </div>
+                                    <div class="member__photo">
+                                        <img src="./img/team/member-2.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                </div>
+
+                                <div class="member__title mobile">
+                                    <h3>
+                                        Иванов Иван
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+
+                            <div class="team-member">
+                                
+                                <div class="member__title desktop">
+                                    <h3>
+                                        иванова мария
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+
+
+                                <div class="member__info">
+
+                                    <div class="member__desc">
+                                        <p>
+                                            Техническая составляющая отвечает масштабу задачи в перспективе и включает в себя последние технологии
+                                        </p>
+                                        <p>
+                                            Генерируем идеи и экспериментируем с новыми технологиями, чтобы создать действительно рабочее
+                                        </p>
+                                    </div>
+                                    <div class="member__photo">
+                                        <img src="./img/team/member-3.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                </div>
+
+                                <div class="member__title mobile">
+                                    <h3>
+                                        Иванова Мария
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+
+                            <div class="team-member">
+                                
+                                <div class="member__title desktop">
+                                    <h3>
+                                        иванова мария
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+
+
+                                <div class="member__info">
+
+                                    <div class="member__desc">
+                                        <p>
+                                            Техническая составляющая отвечает масштабу задачи в перспективе и включает в себя последние технологии
+                                        </p>
+                                        <p>
+                                            Генерируем идеи и экспериментируем с новыми технологиями, чтобы создать действительно рабочее
+                                        </p>
+                                    </div>
+                                    <div class="member__photo">
+                                        <img src="./img/team/member-4.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                </div>
+
+                                <div class="member__title mobile">
+                                    <h3>
+                                        Иванова Мария
+                                    </h3>
+                                    <p>
+                                        старший разработчик сайтов, seo
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="team-slider-pagination">
+
+                    </div>
+
+                    <div class="team-slider-button-next">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <rect x="46" width="46" height="46" rx="23" transform="rotate(90 46 0)" fill="#A217DF" />
+                            </g>
+                            <path d="M31.9371 24.3751C32.5229 23.7893 32.5229 22.8396 31.9371 22.2538L22.3912 12.7079C21.8054 12.1221 20.8557 12.1221 20.2699 12.7079C19.6841 13.2936 19.6841 14.2434 20.2699 14.8292L28.7551 23.3145L20.2699 31.7997C19.6841 32.3855 19.6841 33.3353 20.2699 33.9211C20.8557 34.5068 21.8054 34.5068 22.3912 33.9211L31.9371 24.3751ZM15.123 24.8145L30.8765 24.8145L30.8765 21.8145L15.123 21.8145L15.123 24.8145Z" fill="white" />
+                            
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="calculate">
+
+            <div class="container calculate__container">
+
+                <div class="calculate__wrapper">
+
+                    <p>
+                        Мы погружаемся в бизнес <br>
+                        заказчика, хорошо понимаем его <br>
+                        цели, берем на себя целые <br>
+                        направления. Поэтому с <br>
+                        большинством клиентов работаем <br>
+                        годами
+                    </p>
+
+                    <a href="" class="calculate__link">
+                        рассчитать стоимость
+                    </a>
+
+                    <p>
+                        Мы можем выделить под проект<br>
+                        отдельную команду, которая будет <br>
+                        заниматься только клиентской <br>
+                        задачей, а если понадобится, <br>
+                        наши специалисты будут работать<br>
+                        в офисе заказчика
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        
+
+        <section class="callback">
+
+            <div class="container callback__container">
+
+                <h1>
+                    начнем проект?
+                </h1>
+
+                <div class="callback__wrapper">
+
+                    <div class="section-tip__banner left">
+
+                        <h2>
+                            мы свяжемся с вами<br>
+                            для обсуждения деталей<br>
+                            и начала работы<br>
+                        </h2>
+
+                    </div>
+
+                    <div class="callback-form__wrapper">
+                        <h3 class="mb-3">
+                            заполните форму
+                        </h3>
+                        <form class="callback-form" id="myForm  " >
+                            <div class="mb-3">
+                                <div class="error-message" id="nameErrorMessage">Ошибка в имени</div>
+                                <input type="text" class="form-control" id="inputName" placeholder="имя" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="error-message" id="emailErrorMessage">Ошибка в почте</div>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="почта" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="error-message" id="telErrorMessage">Ошибка в телефоне</div>
+                                <input type="tel" class="form-control" id="inputPhone" placeholder="телефон" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-services">
+                                    <label class="service-option">
+                                        <input type="checkbox" name="service" value="Верстка">
+                                        <span class="service-name">верстка</span>
+                                    </label>
+                                    <label class="service-option">
+                                        <input type="checkbox" name="service" value="SEO">
+                                        <span class="service-name">seo</span>
+                                    </label>
+                                    <label class="service-option">
+                                        <input type="checkbox" name="service" value="Парсинг">
+                                        <span class="service-name">парсинг</span>
+                                    </label>
+                                    <label class="service-option">
+                                        <input type="checkbox" name="service" value="Аудит">
+                                        <span class="service-name">аудит</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="error-message" id="messageErrorMessage">Ошибка в сообщении</div>
+                                <textarea class="form-control" id="inputMessage" rows="3" placeholder="расскажите о задаче*"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">отправить</button>
+                        </form>
+                    </div>
+                    
+                    
+                    
+                    
+
+                    
+                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <button onclick="topFunction()" id="scrollToTop" title="ВВЕРХ!">
+        <svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.0607 0.93934C12.4749 0.353553 11.5251 0.353553 10.9393 0.93934L1.3934 10.4853C0.807613 11.0711 0.807612 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.93934ZM13.5 27L13.5 2L10.5 2L10.5 27L13.5 27Z" fill="white" />
+        </svg>
+    </button>
+
+
+
+
+    <footer class="footer">
+
+        <div class="container footer__container">
+
+            <div class="footer__wrapper">
+                <div class="footer__btn">
+                    <h2>
+                        Контакты
+                    </h2>
+                    <a href="mailto:ruha.kachmaz@gmail.com">
+                        ruha.kachmaz@gmail.com
+                    </a>
+                    <a href="tel:+79263881276">
+                        +7 (926) 388 - 12 - 76
+                    </a>
+                </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li>
+                            <a href="">
+                                Портфолио
+                            </a>                    
+                        </li>
+                        <li>
+                            <a href="">
+                                Стоимость услуг
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                О Компании
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__socials">
+
+                    <a href="">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.5387 0.204579L0.591585 7.54852C-0.0501506 7.89049 -0.267208 8.5754 0.436449 8.94709L4.52762 10.4997L14.4194 3.19909C14.9595 2.74075 15.5125 2.86298 15.0367 3.36714L6.54093 12.5534L6.27405 16.441C6.52125 17.0413 6.97385 17.0441 7.26255 16.7457L9.61303 14.0897L13.6386 17.6896C14.5736 18.3506 15.0823 17.924 15.2835 16.7125L17.9239 1.78166C18.198 0.290287 17.7305 -0.366807 16.5387 0.204579Z" fill="black" />
+                        </svg>
+                    </a>
+
+                    <a href="">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 4.19583C14.8842 4.79236 14.4006 5.27583 13.8042 5.27583C13.2078 5.27583 12.7242 4.79236 12.7242 4.19583C12.7242 3.5993 13.2078 3.11583 13.8042 3.11583C14.4007 3.11583 14.8842 3.5993 14.8842 4.19583ZM9 12C7.34316 12 6.00005 10.6568 6.00005 9C6.00005 7.34316 7.34316 6.00005 9 6.00005C10.6568 6.00005 12 7.34316 12 9C12 10.6568 10.6568 12 9 12ZM9 4.37836C6.44752 4.37836 4.37836 6.44752 4.37836 9C4.37836 11.5525 6.44752 13.6216 9 13.6216C11.5525 13.6216 13.6216 11.5525 13.6216 9C13.6216 6.44752 11.5525 4.37836 9 4.37836ZM9 1.62169C11.4031 1.62169 11.6878 1.63083 12.6367 1.67414C13.5142 1.71422 13.9908 1.86075 14.3079 1.98408C14.7279 2.14734 15.0277 2.34239 15.3427 2.65739C15.6577 2.97225 15.8528 3.27206 16.0161 3.69225C16.1392 4.00936 16.2859 4.48594 16.326 5.36344C16.3693 6.31252 16.3785 6.59714 16.3785 9.00028C16.3785 11.4034 16.3693 11.688 16.326 12.637C16.2859 13.5145 16.1394 13.9911 16.0161 14.3082C15.8528 14.7282 15.6577 15.028 15.3427 15.343C15.0279 15.658 14.7281 15.8531 14.3079 16.0163C13.9908 16.1395 13.5142 16.2862 12.6367 16.3263C11.6878 16.3696 11.4031 16.3787 9 16.3787C6.59672 16.3787 6.31209 16.3696 5.36316 16.3263C4.48566 16.2862 4.00908 16.1397 3.69197 16.0163C3.27192 15.8531 2.97211 15.658 2.65711 15.343C2.34225 15.0282 2.14706 14.7284 1.9838 14.3082C1.86061 13.9911 1.71394 13.5145 1.67386 12.637C1.63055 11.6879 1.62141 11.4033 1.62141 9.00028C1.62141 6.59714 1.63055 6.31252 1.67386 5.36344C1.71394 4.48594 1.86047 4.00936 1.9838 3.69225C2.14706 3.2722 2.34211 2.97239 2.65711 2.65739C2.97197 2.34239 3.27178 2.14734 3.69197 1.98408C4.00908 1.86089 4.48566 1.71422 5.36316 1.67414C6.31223 1.63083 6.59686 1.62169 9 1.62169ZM9 0C6.5558 0 6.24923 0.0104063 5.28933 0.0541406C4.33139 0.097875 3.67706 0.250031 3.10472 0.4725C2.51283 0.702422 2.01094 1.01025 1.51059 1.51059C1.01025 2.01094 0.702422 2.51283 0.4725 3.10472C0.250031 3.6772 0.097875 4.33139 0.0541406 5.28933C0.0104063 6.24923 0 6.5558 0 9C0 11.4442 0.0104063 11.7508 0.0541406 12.7107C0.097875 13.6686 0.250031 14.3228 0.4725 14.8953C0.702422 15.4872 1.01025 15.9891 1.51059 16.4894C2.01094 16.9897 2.51283 17.2974 3.10472 17.5275C3.6772 17.75 4.33139 17.9021 5.28933 17.9459C6.24923 17.9896 6.5558 18 9 18C11.4442 18 11.7508 17.9896 12.7107 17.9459C13.6686 17.9021 14.3228 17.75 14.8953 17.5275C15.4872 17.2974 15.9891 16.9897 16.4894 16.4894C16.9897 15.9891 17.2974 15.4872 17.5275 14.8953C17.75 14.3228 17.9021 13.6686 17.9459 12.7107C17.9896 11.7508 18 11.4442 18 9C18 6.5558 17.9896 6.24923 17.9459 5.28933C17.9021 4.33139 17.75 3.6772 17.5275 3.10472C17.2974 2.51283 16.9897 2.01094 16.4894 1.51059C15.9891 1.01025 15.4872 0.702563 14.8953 0.4725C14.3228 0.250031 13.6686 0.097875 12.7107 0.0541406C11.7508 0.0104063 11.4442 0 9 0Z" fill="url(#paint0_radial_162_1079)" />
+                            <defs>
+                              <radialGradient id="paint0_radial_162_1079" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2.6875 18.0625) scale(22.9995)">
+                                <stop />
+                              </radialGradient>
+                            </defs>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </footer>
+
+    <script>
+        
+        // Get the button
+        let scrollToTop = document.getElementById("scrollToTop");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTop.style.display = "block";
+        } else {
+            scrollToTop.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
